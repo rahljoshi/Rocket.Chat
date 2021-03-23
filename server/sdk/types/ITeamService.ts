@@ -49,7 +49,7 @@ export interface ITeamService {
 	list(uid: string, options?: IPaginationOptions): Promise<IRecordsWithTotal<ITeam>>;
 	listAll(options?: IPaginationOptions): Promise<IRecordsWithTotal<ITeam>>;
 	search(userId: string, term: string | RegExp, options?: FindOneOptions<ITeam>): Promise<ITeam[]>;
-	members(uid: string, teamId: string, teamName: string, options?: IPaginationOptions): Promise<IRecordsWithTotal<ITeamMemberInfo>>;
+	members(teamId: string, teamName: string, options?: IPaginationOptions): Promise<IRecordsWithTotal<ITeamMemberInfo>>;
 	IsUserFromTeamWithId(uid: string, teamId: string): Promise<boolean>;
 	IsUserFromTeamNamed(uid: string, teamName: string): Promise<boolean>;
 	addMembers(uid: string, teamId: string, teamName: string, members: Array<ITeamMemberParams>): Promise<void>;
